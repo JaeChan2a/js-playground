@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>BMI를 계산하는 프로그램 작성</h2>
+    <script>
+      var a=prompt("몸무게(kg)을 입력하세요");
+      var b=prompt("신장(cm)를 입력하세요")
+      var c=Number(a)/( (Number(b)/100)*(Number(b)/100));
+       c=Math.round(c * 10) /10;
+       alert("당신의 BMI : "+c);
+    </script>
+  </body>
+</html>

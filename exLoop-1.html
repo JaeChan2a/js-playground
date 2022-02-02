@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var count=0;
+      var sum=0;
+      var i=1;
+
+       while(i!=0){
+         var inputNum=prompt("숫자를 입력하세요");
+         var num=Number(inputNum);
+         sum+=num;
+         count++;
+         if(num==0){
+           i=0;
+           count--;
+           console.log("합 :"+sum+ ", 입력한 숫자의 개수: "+count);
+         }
+      }
+
+    </script>
+  </body>
+</html>
