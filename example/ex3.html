@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div align="center">
+      <h2 align="center">1~ 10000사이의 소수를 화면에 출력하는 프로그램</h2>
+      <button type="button" name="button" onclick="result();">출력하기</button>
+    </div>
+    <script>
+      function result(){
+        numbers={};
+        numbers.all=[];
+        numbers.prime=[];
+
+
+        // 1~max 까지 all[]에 넣는다.
+        numbers.addAll=function(max_num){
+
+            for(i=2;i<=max_num;i++){
+                numbers.all.push(i);
+                numbers.isPrime(i);
+            }
+
+        };
+
+        // 숫자가 소수인지 아닌지 판별
+        numbers.isPrime=function(number){
+          var isPrime=true;
+
+            for(i=2;i<number;i++){
+                if(number % i === 0){ //  소수가 아닐경우
+                  isPrime=false;
+                }
+            }
+
+            if(isPrime===true){
+              numbers.addPrime(number);
+            }
+        };
+
+        // 해당하는 소수를 prime[]에 넣는다
+        numbers.addPrime=function(number){
+          numbers.prime.push(number);
+        }
+        //찾아낸 모든 소수들을  문자열로 변환하여 출력
+        //numbers.getAllPrimes=function();
+
+        numbers.addAll(10000);
+      console.log(numbers.prime);
+      }
+    </script>
+  </body>
+</html>
