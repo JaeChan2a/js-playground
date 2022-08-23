@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <h2>구구단 프로그램</h2>
+      <input type="text" id="num">
+      <button type="button" onclick="runGugudan();">출력</button>
+  <script>
+    function runGugudan(){
+      var dan=document.getElementById('num').value;
+      var n=Number(dan);
+      if(n<2){
+        alert("1단 이하는 출력이 불가능합니다.");
+      }else if(n>9){
+        alert("9단 이상은 출력이 불가능합니다.");
+      }else if(isNaN(n)){
+        alert("숫자만 입력이 가능합니다");
+      }
+      else{
+        document.write("======"+n+" 단 =====<br>");
+        for(var i=2;i<=9;i++){
+          document.write(n +" * " + i +" = " + n*i+"<br>");
+        }
+      }
+    }
+  </script>
+  </body>
+</html>

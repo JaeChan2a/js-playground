@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+  </head>
+  <body>
+    <h1>문자열 계산기 구현하기</h1>
+    <div>
+      첫번째 수 : <input type="text" id="first">
+      두번째 수 : <input type="text" id="second">
+      <input type="button" onclick="main();" value="연산">
+    </div>
+    <h2>구현된 계산 결과</h2>
+    <div id="result">
+      <!-- <p>
+        더하기 :
+      </p>
+      <p>
+         빼기  :
+      </p>
+      <p>
+        곱하기 :
+      </p>
+      <p>
+        나누기 :
+      </p> -->
+    </div>
+    <script>
+      function main(){
+        firstVal = document.getElementById("first").value;
+        secondVal = document.getElementById("second").value;
+        console.log(firstVal);
+        if(isNaN(firstVal)  || isNaN(secondVal) ){
+          alert("숫자를 입력해주세요");
+        }else{
+          firstVal = parseInt(firstVal);
+          secondVal = parseInt(secondVal);
+          result = document.getElementById("result");
+          result.innerHTML = "<p>더하기 : " + (firstVal+secondVal) + "</p> <p>빼기 : "
+                                            + (firstVal - secondVal) + "</p>  <p>곱하기 : "
+                                            + (firstVal * secondVal) + "</p>  <p>나누기 : "
+                                            + (parseInt(firstVal / secondVal)) + "</p>";
+        }
+      }
+    </script>
+  </body>
+</html>
