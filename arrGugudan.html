@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>배열로 구구단</title>
+</head>
+
+<body style="width:1800px;">
+  <h2>구구단</h2>
+  <div id="content"></div>
+  <script>
+    var result = [];
+    var length = 9;
+
+
+    for (var i = 2; i <= length; i++) {
+
+        if(i==6){
+          document.write("<div style='clear:both;'></div>");
+          document.write("<div style='float:left;text-align:center;margin-right:20px;'><h2>=====" + i + "단=====</h2><br>");
+        }else{
+          document.write("<div style='float:left;text-align:center;margin-right:20px;'><h2>=====" + i + "단=====</h2><br>");
+        }
+      for (var j = 1; j <= length; j++) {
+        result[j] = i * j;
+        document.write(i + " * " + j + " = " + result[j] + "<br>");
+      }
+      document.write("</div>");
+    }
+  </script>
+  <video width="320" height="240" controls>
+  <source src="12.wmv" type="video/mp4">
+</video>
+</body>
+</html>

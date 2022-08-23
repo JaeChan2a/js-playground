@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>gugudan 11</title>
+  </head>
+  <body>
+    <script>
+      gugudan ={};
+      gugudan.result=[];
+      gugudan.current=-1;
+
+      gugudan.calculrate=function(n){
+        this.current=n;
+        for(var i=1;i<=9;i++){
+          this.result[i]= n*i;
+        }
+      }
+
+      gugudan.print=function(){
+        document.write("<h2>"+this.current + "단 </h2>")
+        for(var i=1;i<=9;i++){
+            document.write(this.current+ " * " + i + " = " + this.result[i]+"<br>");
+        }
+      }
+
+      function main(){
+        for (var i=2;i<=9;i++){
+          gugudan.calculrate(i);
+          gugudan.print();
+        }
+      }
+       main();
+    </script>
+  </body>
+</html>
